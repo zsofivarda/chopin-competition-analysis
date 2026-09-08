@@ -45,7 +45,7 @@ Az adatok a Wikipédia egyes Chopin-verseny kiírásainak oldalairól, valamint 
 
 **2. oldal – Részvétel és kategóriák**
 - Versenyeken való részvétel gyakorisága országonként (oszlopdiagram)
-- Döntősök megoszlása kategóriák szerint (donut chart)
+- Döntősök megoszlása kategóriák szerint (fánk diagram)
 
 ## Fájlstruktúra
 
@@ -60,9 +60,9 @@ Az adatok a Wikipédia egyes Chopin-verseny kiírásainak oldalairól, valamint 
     └── page2_reszvetel_kategoriak.png
 ```
 
-## Screenshotok
+## Képernyőfotók
 
-*(Ide illeszd be a két dashboard-oldalról készült képernyőképet)*
+
 
 ![1. oldal – Országok és trendek](screenshots/page1_orszagok_trendek.png)
 
