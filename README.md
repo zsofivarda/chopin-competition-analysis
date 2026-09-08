@@ -10,9 +10,9 @@ Közel két évtizedes klasszikus zenei (kürtművész-kürttanári) szakmai há
 
 ## Használt eszközök
 
-* **Excel / Power Query** – adatgyűjtés és -tisztítás
-* **Microsoft SQL Server + SSMS** – adattárolás és elemző lekérdezések
-* **Power BI Desktop** – vizualizáció és dashboard-készítés
+- **Excel / Power Query** – adatgyűjtés és -tisztítás
+- **Microsoft SQL Server + SSMS** – adattárolás és elemző lekérdezések
+- **Power BI Desktop** – vizualizáció és dashboard-készítés
 
 ## Adatforrás
 
@@ -23,51 +23,47 @@ Az adatok a Wikipédia egyes Chopin-verseny kiírásainak oldalairól, valamint 
 1. **Adatgyűjtés**: az egyes versenyévek Wikipédia-táblázatainak importálása Excelbe (Power Query "Webről" funkció)
 2. **Tisztítás**: whitespace-hibák, országnév-inkonzisztenciák, kategorizálási pontatlanságok javítása
 3. **Kategorizálás**: minden versenyző besorolása három kategória egyikébe:
-
-   * *Döntő + helyezés* – számozott helyezést elért döntősök
-   * *Döntő + díjazott* – helyezés nélkül, de pénzdíjjal jutalmazott döntősök
-   * *Egyéb díjazott* – különdíjasok, akik nem jutottak döntőbe
+   - *Döntő + helyezés* – számozott helyezést elért döntősök
+   - *Döntő + díjazott* – helyezés nélkül, de pénzdíjjal jutalmazott döntősök
+   - *Egyéb díjazott* – különdíjasok, akik nem jutottak döntőbe
 4. **SQL elemzés**: csoportosító és összesítő lekérdezések (országonkénti eloszlás, időbeli trendek, részvételi konzisztencia)
 5. **Power BI vizualizáció**: kétoldalas interaktív dashboard
 
 ## Főbb megállapítások
 
-* A helyezettek (Döntő + helyezés kategória) alapján a **Szovjetunió/Oroszország (33)** és **Lengyelország (31)** dominálja a versenyt, messze megelőzve a többi országot.
-* A verseny **már a 2. kiírástól (1932) kezdve nemzetközivé vált** (6 különböző ország), nem egy fokozatos, lassú folyamat eredményeként.
-* **1949-ben jelentősen visszaesett** a résztvevő országok száma (2 ország, szemben az 1937-es 6-tal) – ez valószínűleg a II. világháborút követő időszak korlátozottabb nemzetközi kapcsolataival függhet össze, bár ennek pontos okát nem vizsgáltam részletesen.
-* A **részvételi konzisztencia** (hány különböző évben szerepelt egy ország) más sorrendet mutat, mint az összesített döntős-szám: **Japán** a versenyek 12-ből, **Lengyelország** 16-ból volt jelen, ami arra utal, hogy egyes országok nem csak mennyiségileg, hanem időben elhúzódóan is jelen vannak a mezőnyben.
+- A helyezettek (Döntő + helyezés kategória) alapján a **Szovjetunió/Oroszország (33)** és **Lengyelország (31)** dominálja a versenyt, messze megelőzve a többi országot.
+- A verseny **már a 2. kiírástól (1932) kezdve nemzetközivé vált** (6 különböző ország), nem egy fokozatos, lassú folyamat eredményeként.
+- **1949-ben jelentősen visszaesett** a résztvevő országok száma (2 ország, szemben az 1937-es 6-tal) – ez valószínűleg a II. világháborút követő időszak korlátozottabb nemzetközi kapcsolataival függhet össze, bár ennek pontos okát nem vizsgáltam részletesen.
+- A **részvételi konzisztencia** (hány különböző évben szerepelt egy ország) más sorrendet mutat, mint az összesített döntős-szám: **Japán** a versenyek 12-ből, **Lengyelország** 16-ból volt jelen, ami arra utal, hogy egyes országok nem csak mennyiségileg, hanem időben elhúzódóan is jelen vannak a mezőnyben.
 
 ## Dashboard felépítése
 
 **1. oldal – Országok és trendek**
-
-* Helyezettek száma országonként (oszlopdiagram)
-* Országok száma évenként (vonaldiagram)
-* Rövid kontextus az 1949-es visszaesésről
+- Helyezettek száma országonként (oszlopdiagram)
+- Országok száma évenként (vonaldiagram)
+- Rövid kontextus az 1949-es visszaesésről
 
 **2. oldal – Részvétel és kategóriák**
-
-* Versenyeken való részvétel gyakorisága országonként (oszlopdiagram)
-* Döntősök megoszlása kategóriák szerint (donut chart)
+- Versenyeken való részvétel gyakorisága országonként (oszlopdiagram)
+- Döntősök megoszlása kategóriák szerint (donut chart)
 
 ## Fájlstruktúra
 
 ```
 ├── README.md
 ├── data/
-│   └── chopin\_versenyek.csv       # Végleges, tisztított adat
+│   └── chopin_versenyek.csv       # Végleges, tisztított adat
 ├── powerbi/
-│   └── Chopin\_verseny\_elemzes.pbix
+│   └── Chopin_verseny_elemzes.pbix
 └── screenshots/
-    ├── page1\_orszagok\_trendek.png
-    └── page2\_reszvetel\_kategoriak.png
+    ├── page1_orszagok_trendek.png
+    └── page2_reszvetel_kategoriak.png
 ```
 
 ## Screenshotok
 
+*(Ide illeszd be a két dashboard-oldalról készült képernyőképet)*
 
+![1. oldal – Országok és trendek](screenshots/page1_orszagok_trendek.png)
 
-!\[1. oldal – Országok és trendek](screenshots/page1\_orszagok\_trendek.png)
-
-!\[2. oldal – Részvétel és kategóriák](screenshots/page2\_reszvetel\_kategoriak.png)
-
+![2. oldal – Részvétel és kategóriák](screenshots/page2_reszvetel_kategoriak.png)
